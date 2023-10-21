@@ -3,6 +3,340 @@
     margin: 0;
 }
 
-.home_test{
-    font-size: 2rem;
+body{
+    background-color: #f9fafb;
+    padding-bottom: 50px;
 }
+
+::-webkit-scrollbar {
+    width:0;
+    background-color: transparent;
+  }
+
+/* Start of Common Class Section */
+
+.font{
+    font-family: "Public Sans", sans-serif;
+}
+
+.color_dark{
+    color: #212b36;
+}
+
+.color_medium{
+    color: #919eab;
+}
+
+.data_not_found{
+    text-align: center;
+    font-size: 1rem;
+    margin: 1%;
+}
+
+.view_all{
+    text-align: end;
+    width: 80%;
+    cursor: pointer;
+    margin-left: 75%;
+}
+
+.load_more{
+    text-align: center;
+    cursor: pointer;
+}
+
+/* End of Common Class Section */
+
+/* Start of Home Component */
+
+.home_welcome{
+    font-size: 2rem;
+    margin: 3% 8% 1% 8%;
+}
+
+.home_college_list_heading{
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.home_pie_container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* End of Home Component */
+
+/* Start of College List Component */
+
+.college_list_container{
+    width: 60%;
+    margin: 50px auto;
+    padding: 0.5% 1%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(145, 158, 171, 0.08) 0px 0px 2px 0px, rgba(145, 158, 171, 0.08) 0px 12px 24px -4px;
+    box-sizing: border-box;
+}
+
+/* End of College List Component */
+
+/* Start of College Element Component */
+
+.college_element_container{
+    width: 95%;
+    margin: 10px auto;
+    border-bottom: solid 1px #e5e8eb;
+    padding: 20px;
+    display: flex;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.college_element_container:last-child{
+    border: none;
+}
+
+.college_element_container p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.college_element_id{
+    width: 15%;
+}
+
+.college_element_name{
+    width: 50%;
+}
+
+.college_element_rating{
+    width: 15%;
+}
+
+.college_element_location{
+    width: 20%;
+}
+
+/* End of College Element Component */
+
+/* Start of College Data Component */
+
+.college_data_container{
+    width: 75%;
+    background-color: #ffffff;
+    margin: 2% auto;
+    border-radius: 10px;
+    box-shadow: rgba(145, 158, 171, 0.08) 0px 0px 2px 0px, rgba(145, 158, 171, 0.08) 0px 12px 24px -4px;
+    padding: 20px 100px;
+    box-sizing: border-box;
+}
+
+.college_data_heading{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
+    border-bottom: solid 1px #e5e8eb;
+    margin-bottom: 30px;
+    padding: 10px 0 25px 0;
+}
+
+.college_data_details_container{
+    font-size: 1.4rem;
+}
+
+.college_data_details_container p{
+    margin: 20px 0;
+}
+
+.college_data_course_container{
+    padding: 0 50px;
+    font-size: 1.2rem;
+}
+
+.college_data_course_container p{
+    margin: 20px 0;
+}
+
+/* End of College Data Component */
+
+/* Start of College Page Component */
+
+.college_page_section_head{
+    font-size: 1.5rem;
+    margin: 50px 80px 30px 80px;
+    font-weight: 500;
+}
+
+/* End of College Page Component */
+
+/* Start of Student List Component */
+
+.student_list_container{
+    width: 60%;
+    margin: 50px auto;
+    padding: 0.5% 1%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(145, 158, 171, 0.08) 0px 0px 2px 0px, rgba(145, 158, 171, 0.08) 0px 12px 24px -4px;
+}
+
+/* End of Student List Component */
+
+/* Start of Student Element Component */
+
+.student_element_container{
+    width: 95%;
+    margin: 10px auto;
+    border-bottom: solid 1px #e5e8eb;
+    padding: 20px;
+    display: flex;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.student_element_container:last-child{
+    border: none;
+}
+
+.student_element_container p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.student_element_id{
+    width: 25%;
+}
+
+.student_element_name{
+    width: 50%;
+}
+
+.student_element_batch{
+    width: 25%;
+}
+
+/* End of Student Element Component */
+
+/* Start of Student Data Component */
+
+.student_data_container{
+    width: 75%;
+    background-color: #ffffff;
+    margin: 2% auto;
+    border-radius: 10px;
+    box-shadow: rgba(145, 158, 171, 0.08) 0px 0px 2px 0px, rgba(145, 158, 171, 0.08) 0px 12px 24px -4px;
+    padding: 20px 100px;
+    box-sizing: border-box;
+}
+
+.student_data_heading{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
+    border-bottom: solid 1px #e5e8eb;
+    margin-bottom: 30px;
+    padding: 10px 0;
+}
+
+.student_data_details_container{
+    font-size: 1.4rem;
+}
+
+.student_data_details_container p{
+    margin: 20px 0;
+}
+
+.student_data_course_container{
+    padding: 0 50px;
+    font-size: 1.2rem;
+}
+
+.student_data_course_container p{
+    margin: 20px 0;
+}
+
+/* End of Student Data Component */
+
+/* Start of Student Page Component */
+
+.student_page_section_head{
+    font-size: 1.5rem;
+    margin: 50px 80px 30px 80px;
+    font-weight: 500;
+}
+
+/* End of Student Page Component */
+
+/* Start of Student by College Component */
+
+.student_by_college_head{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.student_by_college_container{
+    padding: 50px 0;
+}
+
+/* End of Student by College Component */
+
+/* Start of Search Component */
+
+.search_outer_container{
+    position: relative;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.search_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search_input{
+    width: 80%;
+    font-size: 1.5rem;
+    padding: 16px 30px;
+    border: solid 1px #e5e8eb;
+    outline: none;
+    border-radius: 8px;
+    color: #222222;
+    box-sizing: border-box;
+}
+
+.search_result_container{
+    width: 80%;
+    height: 200px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 10%;
+    border-radius: 8px;
+    overflow: scroll;
+    z-index: 30;
+    box-sizing: border-box;
+    padding: 20px;
+    border: solid 1px #e5e8eb;
+}
+
+.search_college_name{
+    margin: 15px 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* End of Search Component */
+
+/* Start of Colleges Component */
+
+.college_container{
+    padding: 20px 0;
+}
+
+/* End of Colleges Component */
+
+

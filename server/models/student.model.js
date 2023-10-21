@@ -4,14 +4,14 @@ const Schema = mongoose.Schema;
 
 const StudentModel = new Schema({
   id: {
-    type: Number,
+    type: String,
     required: true,
   },
   name: {
     type: String,
     required: true,
   },
-  college: {
+  collegeId: {
     type: String,
     required: true,
   },
@@ -20,7 +20,11 @@ const StudentModel = new Schema({
     required: true,
   },
   skills: {
-    type: Array,
+    type: [String],
+    required: true,
+  },
+  dateOfBirth: {
+    type: String,
     required: true,
   },
 });

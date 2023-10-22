@@ -27,6 +27,7 @@ export const addStudent = async (req, res) => {
         return res.status(201).json({
           message: "Student added successfully.",
           status: true,
+          id: id,
         });
       } else {
         return res.status(500).json({
@@ -54,6 +55,10 @@ export const getStudentByCollege = async (req, res) => {
 
     const skipNo = Number(pageNo) === 1 ? 0 : (Number(pageNo) - 1) * limit;
 
+    let studentCount = await StudentModel.countDocuments({
+      collegeId: collegeId,
+    });
+
     const studentList = await StudentModel.find(
       {
         collegeId: collegeId,
@@ -65,6 +70,7 @@ export const getStudentByCollege = async (req, res) => {
 
     return res.status(200).json({
       studentList: studentList,
+      studentCount: studentCount,
       message: "Students fetched successfully.",
       status: true,
     });

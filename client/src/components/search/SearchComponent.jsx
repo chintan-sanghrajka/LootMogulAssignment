@@ -9,7 +9,6 @@ const SearchComponent = () => {
     const navigate = useNavigate()
     const onChangeHandler = (event) => {
         setUserInput(event.target.value)
-        console.log(userInput)
     }
 
     useEffect(() => {
@@ -19,7 +18,6 @@ const SearchComponent = () => {
     }, [userInput])
 
     const collegeList = useSelector(state => state.college.searchColleges)
-    console.log(collegeList)
 
     const onClickHandler = (id) => {
         navigate(`/college-page/${id}`)
@@ -35,12 +33,17 @@ const SearchComponent = () => {
                         onChange={onChangeHandler} />
                 </div>
                 {userInput !== "" &&
+
                     <div className='search_result_container'>
-                        {collegeList.map((college, index) => {
-                            return <p className='search_college_name color_dark font' key={index}
-                                onClick={() => onClickHandler(college.id)}
-                            >{college.id} - {college.name}</p>
-                        })}
+                        {collegeList.length === 0 ?
+
+                            <p className='search_college_name color_dark font'>No Records Found</p> :
+
+                            collegeList.map((college, index) => {
+                                return <p className='search_college_name color_dark font' key={index}
+                                    onClick={() => onClickHandler(college.id)}
+                                >{college.id} - {college.name}</p>
+                            })}
                     </div>
                 }
             </div>

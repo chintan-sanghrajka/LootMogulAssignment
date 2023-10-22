@@ -4,6 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import collegeRouter from "./routers/college.router.js";
 import studentRouter from "./routers/student.router.js";
+import StudentModel from "./models/student.model.js";
 
 dotenv.config();
 

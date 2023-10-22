@@ -35,7 +35,22 @@ export const getStudentListByCollege = createAsyncThunk(
       const res = await axios.get(
         `${BASE_URL}get-student-by-college/${collegeId}/${limit}/${pageNo}`
       );
-      return res.data.studentList;
+      let studentList = res.data.studentList;
+      let studentCount = res.data.studentCount;
+      return { studentList, studentCount };
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);
+
+let emptyArray = [];
+
+export const clearStudents = createAsyncThunk(
+  "clearStudents",
+  async (args, { rejectWithValue }) => {
+    try {
+      return emptyArray;
     } catch (error) {
       return rejectWithValue(error);
     }

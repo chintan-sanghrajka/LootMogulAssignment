@@ -3,11 +3,13 @@ import {
   getStudentList,
   getStudentData,
   getStudentListByCollege,
+  clearStudents,
 } from "./studentAction.js";
 
 const initialState = {
   studentList: [],
   studentData: [],
+  studentCount: 0,
   studentListByCollege: [],
   isLoading: false,
   success: null,
@@ -48,10 +50,22 @@ export const studentEventSlice = createSlice({
       state.isLoading = false;
       state.studentListByCollege = [
         ...state.studentListByCollege,
-        ...action.payload,
+        ...action.payload.studentList,
       ];
+      state.studentCount = action.payload.studentCount;
     },
     [getStudentListByCollege.rejected]: (state) => {
+      state.isLoading = false;
+      state.error = true;
+    },
+    [clearStudents.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [clearStudents.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.studentListByCollege = action.payload;
+    },
+    [clearStudents.rejected]: (state) => {
       state.isLoading = false;
       state.error = true;
     },

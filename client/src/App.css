@@ -45,6 +45,14 @@ body{
     cursor: pointer;
 }
 
+.pie_head{
+    text-align: center;
+}
+
+.pie{
+    margin: auto;
+}
+
 /* End of Common Class Section */
 
 /* Start of Home Component */
@@ -338,5 +346,196 @@ body{
 }
 
 /* End of Colleges Component */
+
+/* Start of Media Query */
+
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+
+    .college_list_container{
+        width: 70%;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .search_outer_container{
+        width: 80%;
+    }
+
+    .home_welcome{
+        margin: 3% 5% 2% 5%;
+    }
+
+    .home_pie_container{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .pie_position{
+        width: 60% !important;
+        margin: auto;
+    }
+
+    .college_list_container{
+        width: 80%;
+    }
+
+    .college_data_container{
+        width: 80%;
+    }
+
+    .college_data_heading{
+        font-size: 2rem;
+    }
+
+    .student_list_container{
+        width: 75%;
+    }
+
+    .student_data_container{
+        width: 80%;
+    }
+
+    .student_data_heading{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px){
+    .search_outer_container{
+        width: 90%;
+    }
+
+    .home_pie_container{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .pie_position{
+        width: 82% !important;
+        margin: auto;
+    }
+
+    .college_list_container{
+        width: 95%;
+    }
+
+    .college_data_container{
+        width: 90%;
+        padding: 20px 50px;
+    }
+
+    .college_data_heading{
+        font-size: 1.8rem;
+    }
+
+    .student_list_container{
+        width: 85%;
+    }
+
+    .student_data_container{
+        width: 90%;
+        padding: 20px 50px;
+    }
+
+    .student_data_heading{
+        font-size: 2rem;
+    }
+
+    .student_by_college_head{
+        margin: 0 20px;
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 425px){
+
+    .search_outer_container{
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .search_container{
+        width: 100%;
+    }
+
+    .search_input{
+        width: 90%;
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+    .search_result_container{
+        width: 90%;
+        left: 5%;
+        padding: 10px;
+    }
+    .search_college_name{
+        font-size: 1rem;
+    }
+    .home_welcome{
+        font-size: 1.5rem;
+    }
+    .home_pie_container{
+        flex-direction: column;
+    }
+    .pie_position{
+        width: 100% !important;
+    }
+    .overflow_allow{
+        overflow: scroll;
+    }
+    .college_list_container{
+        width: 95%;
+        overflow: scroll;
+    }
+    .mobile_width{
+        width: 240%;
+    }
+    .college_data_container{
+        width: 90%;
+        padding: 10px;
+    }
+    .college_data_heading{
+        font-size: 1.5rem;
+    }
+    .college_data_details_container{
+        font-size: 1.2rem;
+    }
+    .college_data_course_container{
+        font-size: 1rem;
+    }
+    .college_page_section_head{
+        margin: 50px 15px 30px 15px;
+    }
+    .student_list_container{
+        width: 95%;
+    }
+    .student_by_college_head{
+        font-size: 1.4rem;
+    }
+    .student_data_container{
+        width: 95%;
+        padding: 20px;
+    }
+    .student_data_heading{
+        font-size: 1.5rem;
+    }
+    .student_data_details_container{
+        font-size: 1.2rem;
+    }
+    .student_data_course_container{
+        font-size: 1rem;
+    }
+    .view_all{
+        margin-left: 65%;
+    }
+    .student_page_section_head{
+        margin: 50px 20px 30px 20px;
+    }
+}
+
+/* End of Media Query */
 
 

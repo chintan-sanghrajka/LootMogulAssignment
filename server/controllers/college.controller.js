@@ -196,6 +196,8 @@ export const getColleges = async (req, res) => {
 
     const skipNo = Number(pageNo) === 1 ? 0 : (Number(pageNo) - 1) * limit;
     if (action === "state") {
+      let collegeCount = await CollegeModel.countDocuments({ state: value });
+
       let collegeList = await CollegeModel.find(
         {
           state: value,
@@ -206,10 +208,12 @@ export const getColleges = async (req, res) => {
         .skip(skipNo);
       return res.status(200).json({
         collegeList: collegeList,
+        collegeCount: collegeCount,
         message: "Colleges Fetched Successfully.",
         status: true,
       });
     } else if (action === "course") {
+      let collegeCount = await CollegeModel.countDocuments({ courses: value });
       let collegeList = await CollegeModel.find(
         {
           courses: value,
@@ -218,9 +222,9 @@ export const getColleges = async (req, res) => {
       )
         .limit(limit)
         .skip(skipNo);
-      console.log(collegeList);
       return res.status(200).json({
         collegeList: collegeList,
+        collegeCount: collegeCount,
         message: "Colleges Fetched Successfully.",
         status: true,
       });
@@ -287,7 +291,6 @@ export const getHomeCourseWiseData = async (req, res) => {
           return { course: course, collegeCount };
         })
         .catch((error) => {
-          console.error(error);
           return { course: course.course, collegeCount: 0 };
         });
 
@@ -302,7 +305,6 @@ export const getHomeCourseWiseData = async (req, res) => {
       status: true,
     });
   } catch (error) {
-    console.log(error.message);
     res.status(500).json({
       message: error.message,
       status: false,

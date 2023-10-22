@@ -10,18 +10,19 @@ const CollegeList = ({ collegeList }) => {
                 collegeList.length !== 0 &&
                 <>
                     <div className='college_list_container'>
+                        <div className='mobile_width'>
+                            <div className='college_element_container font color_dark'>
+                                <p className='college_element_id'>Id</p>
+                                <p className='college_element_name'>Name</p>
+                                <p className='college_element_rating'>Rating</p>
+                                <p className='college_element_location'>Location</p>
+                            </div>
 
-                        <div className='college_element_container font color_dark'>
-                            <p className='college_element_id'>Id</p>
-                            <p className='college_element_name'>Name</p>
-                            <p className='college_element_rating'>Rating</p>
-                            <p className='college_element_location'>Location</p>
+                            {
+                                collegeList.map((college, index) => {
+                                    return <CollegeElement college={college} key={index} />
+                                })}
                         </div>
-
-                        {
-                            collegeList.map((college, index) => {
-                                return <CollegeElement college={college} key={index} />
-                            })}
                     </div>
                 </>
             }

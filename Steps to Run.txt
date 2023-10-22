@@ -1,0 +1,5 @@
+1) Download the repository and install all the packages for client side as well as server side using command npm install.
+2) To start server use command - npm run server.
+3) To start client side use command - npm run start.
+4) DB link and port is stored in .env file.
+
